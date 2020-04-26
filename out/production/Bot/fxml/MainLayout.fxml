@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.MediaView?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<AnchorPane
+            fx:id="root"
+            maxHeight="-Infinity"
+            maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="720.0"
+            prefWidth="1280.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controller.MainController">
+    <children>
+        <MediaView
+                fx:id="backMedia"
+                fitHeight="720.0"
+                fitWidth="1280.0"
+                nodeOrientation="INHERIT" />
+
+<!--        Start Button Start-->
+        <JFXButton
+                fx:id="startButton"
+                buttonType="RAISED"
+                layoutX="548.0"
+                layoutY="414.0"
+                prefHeight="70.0"
+                prefWidth="184.0"
+                ripplerFill="WHITE"
+                text=""
+                textAlignment="JUSTIFY"
+                AnchorPane.leftAnchor="548.0"
+                AnchorPane.rightAnchor="548.0"
+                onAction="#handleStartButtonClicked">
+            <graphic>
+                <ImageView fitHeight="71.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/images/microphone.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+<!--        End Button Start -->
+
+<!--        Start Button Close-->
+        <JFXButton
+                fx:id="closeButton"
+                buttonType="RAISED"
+                layoutX="1250.0"
+                layoutY="14.0"
+                minHeight="16.0"
+                minWidth="16.0"
+                prefHeight="16.0"
+                prefWidth="16.0"
+                style="-fx-background-color: red; -fx-background-radius: 40;"
+                text="x"
+                textAlignment="JUSTIFY"
+                textFill="WHITE"
+                AnchorPane.rightAnchor="14.0"
+                AnchorPane.topAnchor="14.0"
+                onAction="#handleCloseButtonClicked">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </JFXButton>
+<!--        End Button Close-->
+
+<!--        Start Button Maximize-->
+        <JFXButton
+                fx:id="maximizeButton"
+                buttonType="RAISED"
+                layoutX="1226.0"
+                layoutY="14.0"
+                minHeight="16.0"
+                minWidth="16.0"
+                prefHeight="16.0"
+                prefWidth="16.0"
+                style="-fx-background-color: #00FF00; -fx-background-radius: 40;"
+                text="[]"
+                textAlignment="JUSTIFY"
+                textFill="WHITE"
+                AnchorPane.rightAnchor="38.0"
+                AnchorPane.topAnchor="14.0"
+                onAction="#handleMaximizeButtonClicked">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </JFXButton>
+<!--        End Button Maximize-->
+
+<!--        Start Button Minimize-->
+        <JFXButton
+                fx:id="minimizeButton"
+                buttonType="RAISED"
+                layoutX="1203.0"
+                layoutY="14.0"
+                minHeight="16.0"
+                minWidth="16.0"
+                prefHeight="16.0"
+                prefWidth="16.0"
+                style="-fx-background-color: yellow; -fx-background-radius: 40;"
+                text="_"
+                textAlignment="JUSTIFY"
+                textFill="WHITE"
+                AnchorPane.rightAnchor="61.0"
+                AnchorPane.topAnchor="14.0"
+                onAction="#handleMinimizeButtonClicked">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </JFXButton>
+<!--        End Button Minimize-->
+
+<!--        Start Text Field-->
+        <JFXTextField
+                fx:id="recTextView"
+                focusColor="WHITE"
+                layoutX="330.0"
+                layoutY="349.0"
+                minHeight="30.0"
+                prefHeight="38.0"
+                prefWidth="620.0"
+                unFocusColor="WHITE"
+                AnchorPane.leftAnchor="330.0"
+                AnchorPane.rightAnchor="330.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+
+        </JFXTextField>
+<!--        End Text Field-->
+
+<!--        Start Ham Toolbar-->
+        <JFXHamburger
+                fx:id="hamAnimation"
+                layoutX="24.0"
+                layoutY="56.0"
+                prefHeight="38.0"
+                prefWidth="56.0"
+                AnchorPane.rightAnchor="1217.0"
+                AnchorPane.topAnchor="56.0" />
+<!--        End Ham Toolbar-->
+
+<!--        Start VBox-->
+        <VBox
+            fx:id="drawer"
+            layoutX="24.0"
+            layoutY="115.0"
+            prefHeight="544.0"
+            prefWidth="250.0"
+            style="-fx-background-color: rgba(0,0,0,0.2); -fx-background-radius: 40;"
+            translateX="-250.0">
+            <children>
+<!--            Start User Button-->
+                <JFXButton
+                    fx:id="userIdNavButton"
+                    buttonType="RAISED"
+                    prefHeight="112.0"
+                    prefWidth="226.0"
+                    ripplerFill="WHITE"
+                    onAction="#handleUserButtonClicked">
+                    <VBox.margin>
+                        <Insets
+                            bottom="12.0"
+                            left="12.0"
+                            right="12.0"
+                            top="12.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView
+                            fitHeight="70.0"
+                            fitWidth="76.0"
+                            pickOnBounds="true"
+                            preserveRatio="true">
+                            <image>
+                                <Image url="@/images/user.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+<!--            End User Button-->
+
+<!--            Start Setting Button-->
+                <JFXButton
+                    fx:id="settingsButton"
+                    buttonType="RAISED"
+                    prefHeight="112.0"
+                    prefWidth="238.0"
+                    ripplerFill="WHITE"
+                    onAction="#handleSettingsButtonClicked">
+                    <VBox.margin>
+                        <Insets
+                            bottom="12.0"
+                            left="12.0"
+                            right="12.0"
+                            top="12.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView
+                            fitHeight="70.0"
+                            fitWidth="76.0"
+                            pickOnBounds="true"
+                            preserveRatio="true">
+                            <image>
+                                <Image url="@/images/settings.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+<!--            End Setting Button-->
+
+<!--            Start About Button-->
+                <JFXButton
+                    fx:id="aboutNavButton"
+                    buttonType="RAISED"
+                    prefHeight="112.0"
+                    prefWidth="238.0"
+                    ripplerFill="WHITE"
+                    onAction="#handleAboutButtonClicked">
+                    <VBox.margin>
+                        <Insets
+                            bottom="12.0"
+                            left="12.0"
+                            right="12.0"
+                            top="12.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView
+                            fitHeight="70.0"
+                            fitWidth="76.0"
+                            pickOnBounds="true"
+                            preserveRatio="true">
+                            <image>
+                                <Image url="@/images/about.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+<!--            End About Button-->
+
+<!--            Start Exit Button-->
+                <JFXButton
+                    fx:id="exitNavButton"
+                    buttonType="RAISED"
+                    prefHeight="112.0"
+                    prefWidth="238.0"
+                    ripplerFill="WHITE"
+                    onAction="#handleExitNavButtonClicked">
+                    <VBox.margin>
+                        <Insets
+                            bottom="12.0"
+                            left="12.0"
+                            right="12.0"
+                            top="12.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <ImageView
+                            fitHeight="70.0"
+                            fitWidth="76.0"
+                            pickOnBounds="true"
+                            preserveRatio="true">
+                            <image>
+                                <Image url="@/images/exit.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+<!--            End Exit Button-->
+            </children>
+        </VBox>
+<!--        End VBox-->
+
+<!--&lt;!&ndash;        Start Stack Pane&ndash;&gt;-->
+<!--        <StackPane-->
+<!--                fx:id="backgroundStackPane"-->
+<!--                layoutX="13.0"-->
+<!--                layoutY="13.0"-->
+<!--                prefHeight="695.0"-->
+<!--                prefWidth="1253.0" />-->
+<!--&lt;!&ndash;        End Stack Pane&ndash;&gt;-->
+    </children>
+</AnchorPane>
