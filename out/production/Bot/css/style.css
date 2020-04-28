@@ -1,0 +1,14 @@
+.jfx-button {
+    -fx-background-color: rgba(0, 0, 0, 0.15);
+    -fx-background-radius: 20%;
+}
+
+.jfx-button:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.25);
+}
+
+.jfx-hamburger > StackPane {
+    -fx-background-color: rgb(200, 200, 200);
+    -fx-pref-height: 4px;
+    -fx-pref-width: 40px;
+}

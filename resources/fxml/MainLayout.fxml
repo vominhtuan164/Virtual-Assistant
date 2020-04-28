@@ -63,7 +63,6 @@
                 prefHeight="16.0"
                 prefWidth="16.0"
                 style="-fx-background-color: red; -fx-background-radius: 40;"
-                text="x"
                 textAlignment="JUSTIFY"
                 textFill="WHITE"
                 AnchorPane.rightAnchor="14.0"
@@ -280,13 +279,14 @@
         </VBox>
 <!--        End VBox-->
 
-<!--&lt;!&ndash;        Start Stack Pane&ndash;&gt;-->
-<!--        <StackPane-->
-<!--                fx:id="backgroundStackPane"-->
-<!--                layoutX="13.0"-->
-<!--                layoutY="13.0"-->
-<!--                prefHeight="695.0"-->
-<!--                prefWidth="1253.0" />-->
-<!--&lt;!&ndash;        End Stack Pane&ndash;&gt;-->
+<!--        Start Stack Pane-->
+        <StackPane
+                fx:id="backgroundStackPane"
+                layoutX="13.0"
+                layoutY="13.0"
+                prefHeight="700.0"
+                prefWidth="1290.0"
+                />
+<!--        End Stack Pane-->
     </children>
 </AnchorPane>
